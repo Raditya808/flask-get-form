@@ -68,7 +68,7 @@ questions, and making PRs.
 # from cgi import parse_qs (telah dihapus oleh python)
 # diganti menggunakan from urllib.parse import parse_qs 
 
-Bagian ini adalah mengimport library wsgiref dan menggunakan urllib 
+Bagian ini adalah mengimport library wsgiref dan menggunakan urllib.parse sebagai parse_qs 
 cgi telah dihapus 
 
 from wsgiref.simple_server import make_server
@@ -116,7 +116,8 @@ index_page = """
 """
 
 # logic menggunakan environ dan QUERY_STRING lalau membuat variabel bernama tes lalu memanggil parse_qs(environ['QUERY_STRING'])
-# dan membuat variabel namadepan dan namabelakang untuk menampung data dari form dengan [''])[0] berfungsi untuk tidak membuat output list 
+# dan membuat variabel namadepan dan namabelakang untuk menampung data dari form dengan [''])[0] berfungsi untuk tidak
+# membuat output list 
 # dan memnampung index_page % (namadepan,namabelakang) sebagai variabel body untuk dikirim ke hasil di index_page 
 def application(environ,start_response):
     if (environ['QUERY_STRING']):
@@ -147,6 +148,7 @@ if __name__=="__main__":
 
 
 ```
+
 
 
 
