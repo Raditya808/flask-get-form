@@ -74,6 +74,8 @@ cgi telah dihapus
 from wsgiref.simple_server import make_server
 from urllib.parse import parse_qs
 
+
+# form yang mengikuti namadepan '' dan namabelakang di ikuti variabel di kode python yang tes.get('')
 index_form = """
 <!DOCTYPE html>
 <html>
@@ -95,6 +97,7 @@ index_form = """
 </html>
 """
 
+# '%s %s' yang berfungsi mengeluarkan hasil dari kode function 
 index_page = """
 <!DOCTYPE html>
 <html>
@@ -144,5 +147,6 @@ if __name__=="__main__":
 
 
 ```
+
 
 
